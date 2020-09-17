@@ -3,7 +3,6 @@ import {RoomContext} from '../context'
 import Loading from './Loading'
 import Room from './Room'
 import Title from './Title'
-import defaultImg from '../images/room-1.jpeg'
 
 export default class FeaturedRooms extends Component {
     static contextType = RoomContext;
