@@ -22,14 +22,13 @@ class RoomProvider extends Component {
         beakfast: false,
         pets: false
     }
- 
+
     getData = async () => {
         try {
             let response = await Client.getEntries({
                 content_type: 'knightsInnRoom',
                 order: 'sys.createdAt'
             });
-            console.log(response.items);
             let rooms = this.formatData(response.items)
             let featuredRooms = rooms.filter(room => room.featured === true)
             let maxPrice = Math.max(...rooms.map(item => {
