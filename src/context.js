@@ -1,4 +1,3 @@
-import { findAllByAltText } from '@testing-library/react';
 import React, { Component } from 'react'
 // import items from './data'
 import Client from './Contentful'
@@ -88,8 +87,6 @@ class RoomProvider extends Component {
             type,
             capacity,
             price,
-            minPrice,
-            maxPrice,
             minSize,
             maxSize,
             breakfast,
@@ -127,6 +124,7 @@ class RoomProvider extends Component {
         if (pets)
             tempRooms = tempRooms.filter(room => room.pets === pets)
 
+        // tempRooms.sort();
         this.setState({
             sortedRooms: tempRooms
         })
